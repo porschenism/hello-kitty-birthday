@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-color: #FFE4E1; /* Matching the color in your image */
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/9952.png');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            color: white;
+            margin-top: 50px;
+        }
+        .hello-kitty {
+            width: 300px;
+            margin-top: 50px;
+        }
+        .balloon {
+            width: 50px;
+            position: absolute;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { bottom: -100px; left: 50%; transform: translateX(0); }
+            100% { bottom: 100vh; left: 60%; transform: translateX(-50px); }
+        }
+        .balloon-2 {
+            animation-delay: 2s;
+        }
+        .balloon-3 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Ayaan!</h1>
+    <img src="https://www.pngall.com/wp-content/uploads/5/Hello-Kitty-Free-Download-PNG.png" alt="Hello Kitty" class="hello-kitty">
+    <p>Click on the balloons for a surprise!</p>
+    <img src="https://www.clipartmax.com/png/middle/105-1050050_balloon-transparent-image-balloon-transparent-png.png" alt="Balloon" class="balloon balloon-1">
+    <img src="https://www.clipartmax.com/png/middle/105-1050050_balloon-transparent-image-balloon-transparent-png.png" alt="Balloon" class="balloon balloon-2">
+    <img src="https://www.clipartmax.com/png/middle/105-1050050_balloon-transparent-image-balloon-transparent-png.png" alt="Balloon" class="balloon balloon-3">
+    <audio id="birthday-song" loop>
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.querySelectorAll('.balloon').forEach(balloon => {
+            balloon.addEventListener('click', () => {
+                alert('Happy Birthday, Ayaan! 🎉🎂');
+                document.getElementById('birthday-song').play();
+            });
+        });
+    </script>
+</body>
+</html>
