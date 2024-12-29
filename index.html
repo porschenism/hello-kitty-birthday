@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white;
+            margin-top: 50px;
+        }
+        .hello-kitty {
+            width: 200px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .balloon {
+            width: 50px;
+            position: absolute;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { bottom: -100px; left: 50%; transform: translateX(0); }
+            100% { bottom: 100vh; left: 60%; transform: translateX(-50px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, [Ayaan]!</h1>
+    <img src="https://w7.pngwing.com/pngs/1008/898/png-transparent-hello-kitty-sanrio-desktop-high-definition-video-others-love-white-text.png" alt="Hello Kitty" class="hello-kitty">
+    <p>Click on the balloons for a surprise!</p>
+    <img src="https://p7.hiclipart.com/preview/337/58/324/pink-balloon-download-pink-balloons-thumbnail.jpg" alt="Balloon" class="balloon">
+    <audio id="birthday-song" src="path-to-birthday-song.mp3" loop></audio>
+    <script>
+        document.querySelector('.balloon').addEventListener('click', () => {
+            alert('Happy Birthday! 🎉🎂');
+            document.getElementById('birthday-song').play();
+        });
+    </script>
+</body>
+</html>
