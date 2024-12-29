@@ -28,6 +28,7 @@
             width: 50px;
             position: absolute;
             animation: float 5s infinite ease-in-out;
+            z-index: 10; /* To ensure it's on top */
         }
         @keyframes float {
             0% { bottom: -100px; left: 50%; transform: translateX(0); }
@@ -36,14 +37,14 @@
     </style>
 </head>
 <body>
-    <h1>Happy Birthday, [Ayaan]!</h1>
+    <h1>Happy Birthday, Ayaan!</h1>
     <img src="https://w7.pngwing.com/pngs/1008/898/png-transparent-hello-kitty-sanrio-desktop-high-definition-video-others-love-white-text.png" alt="Hello Kitty" class="hello-kitty">
-    <p>Click on the balloons for a surprise!</p>
+    <p>Click on the balloon for a surprise!</p>
     <img src="https://p7.hiclipart.com/preview/337/58/324/pink-balloon-download-pink-balloons-thumbnail.jpg" alt="Balloon" class="balloon">
     <audio id="birthday-song" src="https://drive.google.com/uc?export=download&id=1fl0SnFysbyP2GtY7yfFkplKI8Y4XGWsD" loop></audio>
     <script>
         document.querySelector('.balloon').addEventListener('click', () => {
-            alert('Happy Birthday! 🎉🎂');
+            alert('happy birthday! 🎉🎂');
             document.getElementById('birthday-song').play();
         });
     </script>
