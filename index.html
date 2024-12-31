@@ -6,56 +6,91 @@
     <title>Happy Birthday!</title>
     <style>
         body {
-            background-color: #FFE4E1; /* Matching the color in your image */
-            text-align: center;
-            font-family: 'Comic Sans MS', cursive;
             margin: 0;
             padding: 0;
-            background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/9952.png');
-            background-size: cover;
-            background-position: center;
+            background-color: white;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
         }
+
         h1 {
-            color: white;
-            margin-top: 50px;
+            color: #FF69B4;
+            font-size: 3rem;
+            margin-top: 30px;
         }
+
         .hello-kitty {
             width: 300px;
-            margin-top: 50px;
+            margin-top: 20px;
         }
+
         .balloon {
-            width: 50px;
+            width: 70px;
             position: absolute;
-            animation: float 5s infinite ease-in-out;
+            animation: float 6s infinite ease-in-out;
         }
+
         @keyframes float {
-            0% { bottom: -100px; left: 50%; transform: translateX(0); }
-            100% { bottom: 100vh; left: 60%; transform: translateX(-50px); }
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-20px);
+            }
+            100% {
+                bottom: 100vh;
+                transform: translateX(20px);
+            }
         }
-        .balloon-2 {
+
+        .balloon:nth-child(1) {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 40%;
             animation-delay: 2s;
         }
-        .balloon-3 {
+
+        .balloon:nth-child(3) {
+            left: 60%;
             animation-delay: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 80%;
+            animation-delay: 1s;
         }
     </style>
 </head>
 <body>
     <h1>Happy Birthday, Ayaan!</h1>
-    <img src="https://www.pngall.com/wp-content/uploads/5/Hello-Kitty-Free-Download-PNG.png" alt="Hello Kitty" class="hello-kitty">
-    <p>Click on the balloons for a surprise!</p>
-    <img src="https://www.clipartmax.com/png/middle/105-1050050_balloon-transparent-image-balloon-transparent-png.png" alt="Balloon" class="balloon balloon-1">
-    <img src="https://www.clipartmax.com/png/middle/105-1050050_balloon-transparent-image-balloon-transparent-png.png" alt="Balloon" class="balloon balloon-2">
-    <img src="https://www.clipartmax.com/png/middle/105-1050050_balloon-transparent-image-balloon-transparent-png.png" alt="Balloon" class="balloon balloon-3">
+    <img src="https://i.pinimg.com/originals/84/2d/31/842d3152c9b27757a414717f85990165.jpg" alt="Hello Kitty" class="hello-kitty">
+
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+    </div>
+
     <audio id="birthday-song" loop>
-        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+        <source src="https://cdn.pixabay.com/download/audio/2023/06/29/audio_f505c1f0b7.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
     <script>
         document.querySelectorAll('.balloon').forEach(balloon => {
             balloon.addEventListener('click', () => {
-                alert('Happy Birthday, Ayaan! 🎉🎂');
-                document.getElementById('birthday-song').play();
+                alert('Happy Birthday! 🎉🎂');
+                const song = document.getElementById('birthday-song');
+                if (song.paused) {
+                    song.play();
+                } else {
+                    song.pause();
+                }
             });
         });
     </script>
