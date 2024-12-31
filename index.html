@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FF69B4;
+            font-size: 3rem;
+            margin-top: 30px;
+        }
+
+        .hello-kitty {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .balloon {
+            width: 70px;
+            position: absolute;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-20px);
+            }
+            100% {
+                bottom: 100vh;
+                transform: translateX(20px);
+            }
+        }
+
+        .balloon:nth-child(1) {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 80%;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Ayaan!</h1>
+    <img src="https://i.pinimg.com/originals/84/2d/31/842d3152c9b27757a414717f85990165.jpg" alt="Hello Kitty" class="hello-kitty">
+
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Red_Balloon.svg/2048px-Red_Balloon.svg.png" alt="Balloon" class="balloon">
+    </div>
+
+    <audio id="birthday-song" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2023/06/29/audio_f505c1f0b7.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.querySelectorAll('.balloon').forEach(balloon => {
+            balloon.addEventListener('click', () => {
+                alert('Happy Birthday! 🎉🎂');
+                const song = document.getElementById('birthday-song');
+                if (song.paused) {
+                    song.play();
+                } else {
+                    song.pause();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
