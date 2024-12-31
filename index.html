@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ffccdd, #ff99cc);
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #ff5fa2;
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        .hello-kitty {
+            margin: 20px auto;
+            width: 300px;
+            height: auto;
+        }
+
+        /* Balloons animation */
+        .balloon {
+            position: absolute;
+            width: 100px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Different delays and positions for balloons */
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 7s;
+        }
+        .balloon:nth-child(2) {
+            left: 25%;
+            animation-delay: 1s;
+            animation-duration: 8s;
+        }
+        .balloon:nth-child(3) {
+            left: 40%;
+            animation-delay: 2s;
+            animation-duration: 9s;
+        }
+        .balloon:nth-child(4) {
+            left: 55%;
+            animation-delay: 3s;
+            animation-duration: 10s;
+        }
+        .balloon:nth-child(5) {
+            left: 70%;
+            animation-delay: 4s;
+            animation-duration: 6s;
+        }
+        .balloon:nth-child(6) {
+            left: 85%;
+            animation-delay: 5s;
+            animation-duration: 8s;
+        }
+
+        /* Adding a bouncing effect for extra fun */
+        .balloon:hover {
+            animation: bounce 0.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Ayaan!</h1>
+    <img src="https://gimgs2.nohat.cc/thumb/f/640/hello-kitty-party-themed-illustration-hello-kitty-birthday-cake-drawing-hello-transparent-background-png-clipart--comhiclipartmouzb.jpg" alt="Hello Kitty" class="hello-kitty">
+
+    <!-- Balloons -->
+    <img src="https://toppng.com/uploads/preview/heart-shape-balloon-pink-transparent-11546208972uilnkg5cbz.png" alt="Balloon" class="balloon">
+    <img src="https://toppng.com/uploads/preview/heart-shape-balloon-pink-transparent-11546208972uilnkg5cbz.png" alt="Balloon" class="balloon">
+    <img src="https://toppng.com/uploads/preview/heart-shape-balloon-pink-transparent-11546208972uilnkg5cbz.png" alt="Balloon" class="balloon">
+    <img src="https://toppng.com/uploads/preview/heart-shape-balloon-pink-transparent-11546208972uilnkg5cbz.png" alt="Balloon" class="balloon">
+    <img src="https://toppng.com/uploads/preview/heart-shape-balloon-pink-transparent-11546208972uilnkg5cbz.png" alt="Balloon" class="balloon">
+    <img src="https://toppng.com/uploads/preview/heart-shape-balloon-pink-transparent-11546208972uilnkg5cbz.png" alt="Balloon" class="balloon">
+
+    <!-- Music -->
+    <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
