@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            background: linear-gradient(145deg, #ffd1dc, #fff1f9);
+        }
+        h1 {
+            color: #ff69b4;
+            margin-top: 50px;
+            font-size: 3em;
+        }
+        .hello-kitty {
+            width: 250px;
+            margin-top: 20px;
+        }
+        .balloon {
+            width: 100px;
+            animation: float 6s infinite ease-in-out;
+            position: absolute;
+        }
+        .balloon1 {
+            top: 70%;
+            left: 20%;
+        }
+        .balloon2 {
+            top: 75%;
+            left: 60%;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .content {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Ayaan!</h1>
+    <div class="content">
+        <img src="https://i.pinimg.com/originals/84/2d/31/842d3152c9b27757a414717f85990165.jpg" alt="Hello Kitty" class="hello-kitty">
+        <img src="https://i.pinimg.com/474x/e0/86/19/e086193712fc1166e76ced22db76a16b.jpg" alt="Balloon" class="balloon balloon1">
+        <img src="https://i.pinimg.com/474x/e0/86/19/e086193712fc1166e76ced22db76a16b.jpg" alt="Balloon" class="balloon balloon2">
+    </div>
+    <audio id="birthday-song" src="https://cdn.pixabay.com/download/audio/2022/09/06/audio_f1e5b8c506.mp3?filename=happy-birthday-155461.mp3" loop></audio>
+    <script>
+        document.querySelector('.content').addEventListener('click', () => {
+            alert('Happy Birthday, Ayaan! 🎉🎂');
+            document.getElementById('birthday-song').play();
+        });
+    </script>
+</body>
+</html>
